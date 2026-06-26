@@ -38,10 +38,6 @@ def validate_input(data: OptimizationInput) -> list[str]:
             errors.append(
                 f"{passenger.reservation_id}: first and second choices are required."
             )
-        if passenger.first_choice == passenger.second_choice:
-            errors.append(
-                f"{passenger.reservation_id}: first and second choices must differ."
-            )
     return errors
 
 
